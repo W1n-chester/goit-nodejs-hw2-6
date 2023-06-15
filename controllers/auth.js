@@ -87,7 +87,7 @@ const updateAvatar = async (req, res) => {
     if (!image) {
     throw HttpError(400);
   }
-  image.resize(250, 250);
+  image.resize(250, 250).write(`./public/${avatarURL}`);
   await User.findByIdAndUpdate(_id, { avatarURL });
   res.json({
     avatarURL,
