@@ -25,6 +25,5 @@ app.use((err, req, res, next) => {
   const { status = 500, message = "Server error" } = err;
   res.status(status).json({ message });
 });
-// http://localhost:3000/avatars/166071-niul_temnaya_storona-korol-sithi-dzhedaj-dart_vejder-3780x2127.jpg
 
 module.exports = app
